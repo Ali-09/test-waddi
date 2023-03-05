@@ -46,7 +46,7 @@ function renderMovieList(movies) {
     const movieCard = (movie) => `
         <div class="card">
             <div class="card-img">
-                <img src="${movie.image}" alt="${movie.title}" width="100%" />
+                <img src="${movie.image}" alt="${movie.title}" width="100%" height="320px" onerror="this.onerror=null;this.src='https://vpubnd.quangnam.gov.vn/bootstrapv2/resources/portal/common/img/placeholder.jpg'"/>
             </div>
             <div class="card-header">
                 <h3 class="card-header-title">${movie.title}</h3>
@@ -77,6 +77,7 @@ function renderMovieList(movies) {
         </div>
     `;
 
-    movies.forEach((movie) => contentMovies.innerHTML+=movieCard(movie));
-
+    movies.length > 0 ?
+        movies.forEach((movie) => contentMovies.innerHTML+=movieCard(movie))
+        : contentMovies.innerHTML = "<div class='not-results'><h2>Not results</h2></div>"
 }

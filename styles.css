@@ -27,6 +27,17 @@ main{
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
 }
 
+.grid .not-results{
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: center;
+}
+
+.grid .not-results h2{
+    display: flex;
+    border-bottom: 3px solid #727272;
+}
+
 .header{
     display: flex;
     flex-direction: row;
@@ -35,14 +46,10 @@ main{
 }
 
 .header-input{
-    outline: 0;
     background: #fff;
-    padding: 0 1.6rem;
+    padding: 0 1rem;
     border-radius: .7rem;
-    appearance: none;
-    transition: all .3s cubic-bezier(0, 0, 0.43, 1.49);
-    z-index: 1;
-    position: relative;
+    border: 2px solid rgb(30, 30, 30);
 }
 
 .card{
