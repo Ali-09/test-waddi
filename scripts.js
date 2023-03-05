@@ -46,7 +46,7 @@ function renderMovieList(movies) {
     const movieCard = (movie) => `
         <div class="card">
             <div class="card-img">
-                <img src="${movie.image}" alt="${movie.title}" width="100%" height="320px" onerror="this.onerror=null;this.src='https://vpubnd.quangnam.gov.vn/bootstrapv2/resources/portal/common/img/placeholder.jpg'"/>
+                <img src="${movie.image}" alt="${movie.title}" width="100%" height="320px" onerror="this.onerror=null;this.src='./img-not-found.png'"/>
             </div>
             <div class="card-header">
                 <h3 class="card-header-title">${movie.title}</h3>
